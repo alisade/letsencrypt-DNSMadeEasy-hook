@@ -81,6 +81,7 @@ def _has_dns_propagated(name, token):
         return False
 
     for txt_record in txt_records:
+        txt_record=txt_record.decode()
         if txt_record == token:
             return True
 
