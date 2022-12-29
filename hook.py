@@ -156,7 +156,7 @@ def create_txt_record(args):
     r = requests.post(url, headers=DME_HEADERS, json=payload)
 
     if r.status_code != 200:
-      pprint(r.text)
+      print(r.text)
 
     r.raise_for_status()
     record_id = r.json()['id']
